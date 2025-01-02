@@ -1,7 +1,7 @@
 const wppconnect = require("@wppconnect-team/wppconnect");
 
 let  msgId = ""
-let msgId2 = ""
+const  chatID = "120363367329563787@g.us"
 
 wppconnect
   .create()
@@ -21,25 +21,12 @@ function start(client) {
       } else if (msg.body == '!chats') {
         const chats = await client.getAllChats();
         client.sendText(msg.from, `The bot has ${chats.length} chats open.`);
-      } else if (msg.body == '!info') {
-        let info = await client.getHostDevice();
-        let message = `_*Connection info*_\n\n`;
-        message += `*User name:* ${info.pushname}\n`;
-        message += `*Battery:* ${info.battery}\n`;
-        message += `*Plugged:* ${info.plugged}\n`;
-        message += `*Device Manufacturer:* ${info.phone.device_manufacturer}\n`;
-        message += `*WhatsApp version:* ${info.phone.wa_version}\n`;
-        client.sendText(msg.from, message);
+        // Send a new Poll
       } else if (msg.body === '!sendpoll') {
-        msgId = await client.sendPollMessage('120363367329563787@g.us', 'New Product Coffee 🎉?', ['Yes', 'Not this time']);
-        console.log(`msgId ======= ${msgId.id}`)
-
-        
+        msgId = await client.sendPollMessage(chatID, 'New Product Coffee 🎉?', ['Yes', 'Not this time']);
+        // Send mentioned
       } else if (msg.body === '!getVotes') {
-        // const votesData = await client.getVotes(msgId.id);
-        // msgId ======= true_120363367329563787@g.us_3EB05DAEC6B57D752EB486_37253649648@c.us
-        const votesData = await client.getVotes("true_120363367329563787@g.us_3EB05DAEC6B57D752EB486_37253649648@c.us");
-
+        const votesData = await client.getVotes(msgId.id);
         console.log("Raw votes data:", JSON.stringify(votesData, null, 2)); // Log raw data for debugging
         const formattedVotes = votesData.votes.map((vote) => {
           const sender = vote.sender?.user || "Unknown Sender";
@@ -64,10 +51,57 @@ function start(client) {
               `Sender: ${vote.sender}\nOptions: ${vote.selectedOptions.join(", ")}\nTime: ${vote.timestamp}`
           )
           .join("\n\n");
-          
+
         // Send to recipient
-        await client.sendText('120363367329563787@g.us', `Poll Results:\n\n${messageContent}`);
-      } 
+        await client.sendText(chatID, `Poll Results:\n\n${messageContent}`);
+      } else if (msg.body === '!getYesVotes') {
+        const votesData = await client.getVotes(msgId.id);
+        console.log("Raw votes data:", JSON.stringify(votesData, null, 2)); // Log raw data for debugging
+        // Format votes
+        const yesVotes = votesData.votes
+            .filter((vote) =>
+                Array.isArray(vote.selectedOptions) &&
+                vote.selectedOptions.some((option) => option?.name === 'Yes')
+            )
+            .map((vote) => vote.sender?.user || "Unknown Sender");
+
+        console.log("Users who voted 'Yes':", yesVotes);
+
+        // Shuffle the list of users
+        for (let i = yesVotes.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1)); // Random index
+            [yesVotes[i], yesVotes[j]] = [yesVotes[j], yesVotes[i]]; // Swap
+        }
+
+        console.log("Shuffled users:", yesVotes);
+
+        // Create pairs
+        const pairs = [];
+        while (yesVotes.length > 1) {
+            const user1 = yesVotes.shift(); // Remove the first user
+            const user2 = yesVotes.shift(); // Remove the next user
+            pairs.push([user1, user2]);
+        }
+
+        // Prepare a single message
+        let finalMessage = "";
+        const mentionedUsers = [];
+
+        // Add messages for pairs
+        pairs.forEach(([user1, user2]) => {
+            finalMessage += `Hey, @${user1} your pair is @${user2}\n`;
+            mentionedUsers.push(user1, user2);
+        });
+
+        // Add message for unpaired user if any
+        if (yesVotes.length === 1) {
+            finalMessage += `Hey, @${yesVotes[0]} you don't have a pair this time\n`;
+            mentionedUsers.push(yesVotes[0]);
+        }
+
+        // Send the final consolidated message with mentions
+        await client.sendMentioned(chatID, finalMessage.trim(), mentionedUsers);
+          } 
     } catch (error) {
       console.log(error);
     }
