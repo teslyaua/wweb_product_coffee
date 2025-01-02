@@ -1,4 +1,0 @@
-2024/12/26-16:14:16.351 8903 Reusing MANIFEST /Users/iurii.teslia/Projects/wweb_product_coffee/.wwebjs_auth/session/Default/Local Storage/leveldb/MANIFEST-000001
-2024/12/26-16:14:16.352 8903 Recovering log #4
-2024/12/26-16:14:16.352 8903 (ignoring error) /Users/iurii.teslia/Projects/wweb_product_coffee/.wwebjs_auth/session/Default/Local Storage/leveldb/000004.log: dropping 20302 bytes; Corruption: checksum mismatch
-2024/12/26-16:14:16.352 8903 Reusing old log /Users/iurii.teslia/Projects/wweb_product_coffee/.wwebjs_auth/session/Default/Local Storage/leveldb/000004.log 

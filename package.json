@@ -2,15 +2,21 @@
   "name": "wweb_product_coffee",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "mainwpp.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "tests": "npx playwright test --headed"
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
   "dependencies": {
-    "qrcode-terminal": "^0.12.0",
-    "whatsapp-web.js": "^1.26.0"
+    "@wppconnect-team/wppconnect": "^1.35.2",
+    "@wppconnect/wa-js": "^3.16.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2"
   }
 }

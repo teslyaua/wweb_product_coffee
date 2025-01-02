@@ -1,0 +1,13 @@
+2025/01/02-20:36:11.979 8207 Reusing MANIFEST /Users/iurii.teslia/Projects/wweb_product_coffee/tokens/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/01/02-20:36:11.979 8207 Recovering log #80
+2025/01/02-20:36:11.986 8207 Reusing old log /Users/iurii.teslia/Projects/wweb_product_coffee/tokens/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000080.log 
+2025/01/02-20:36:13.007 b203 Level-0 table #85: started
+2025/01/02-20:36:13.018 b203 Level-0 table #85: 508725 bytes OK
+2025/01/02-20:36:13.027 b203 Delete type=0 #80
+2025/01/02-20:36:13.028 8207 Manual compaction at level-0 from '\x000\x00\x00\x00' @ 72057594037927935 : 1 .. '\x001\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/01/02-20:36:13.029 b203 Compacting 1@1 + 1@2 files
+2025/01/02-20:36:13.070 b203 Generated table #86@1: 49452 keys, 1903767 bytes
+2025/01/02-20:36:13.070 b203 Compacted 1@1 + 1@2 files => 1903767 bytes
+2025/01/02-20:36:13.077 b203 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/01/02-20:36:13.078 b203 Delete type=2 #82
+2025/01/02-20:36:13.078 b203 Delete type=2 #85

@@ -1,0 +1,283 @@
+{
+  "cookies": [
+    {
+      "name": "wa_ul",
+      "value": "c4a5a6de-3f70-4059-a4c4-6556419dad4a",
+      "domain": ".web.whatsapp.com",
+      "path": "/",
+      "expires": 1743462979.4036,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "wa_web_lang_pref",
+      "value": "en_US",
+      "domain": ".web.whatsapp.com",
+      "path": "/",
+      "expires": 1738106179,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://web.whatsapp.com",
+      "localStorage": [
+        {
+          "name": "hour-24-from-phone",
+          "value": "true"
+        },
+        {
+          "name": "MdHistoryLastChunkProcessed",
+          "value": "\"3_1\""
+        },
+        {
+          "name": "WAUnarchiveChatsSetting",
+          "value": "false"
+        },
+        {
+          "name": "4DZuQ886noXoHHy8f0W3aw==",
+          "value": "\"NOT_ACCEPTED\""
+        },
+        {
+          "name": "nat5dCQV+O9Iy8hdW0o5rg==",
+          "value": "\"ACCEPTED\""
+        },
+        {
+          "name": "p8/QU1Ekvvge8G+1Cw08wg==",
+          "value": "{\"chatLockSupportLevel\":2}"
+        },
+        {
+          "name": "WGM+0i+2LIVWKJzadnnKjA==",
+          "value": "false"
+        },
+        {
+          "name": "ChatThreadLoggingSecret",
+          "value": "\"hYIkUESjs4Yu2SJWOtjmwWSk7yvOZgNdtc//x3NTrrg=\""
+        },
+        {
+          "name": "WANoiseInfo",
+          "value": "{\"privKey\":\"ABCIheQOHoy/WWqXGxfY4BhAUS4MiWta35bbC/i9YZ9YWWMwvLx9tH0GolMT97oz\",\"pubKey\":\"72tBCChEydvPZ5H/T3ZtzqRPTQszh54U7O0loJ2zzB6NEVzmnAGtN2BGTrKyuhA3\",\"recoveryToken\":\"uVuuUS8PQ8YPJdk8gmXLiTgLQrKucU3hOm3jpdN58/s=\",\"certificateChainBuffer\":\"uXbHimXpNdD2X/M+/yZkwRe33TsEkDxavMc2DBQhX/FwRo5RBmw0yaFQpO3R8PE1yw21sMMAc6w2iyV8I8JuXdVVQhTinh942Gc06dI6u3B9LJA0oMqrlww/8c4PPeGueMPtL1s9wgMor50JTP1IBNGHWvo/h4HtsmyfUjHQzHmHW8eTe+KQrbVpDYbqTLSVxciBA9s7ACCu1yHPcHTOQoq1+BoMKsVauTlWylOwC+uEmWf5JywhX2xCu4eLbV78O3EySjEb8X8y8NMCzA4DRgVOZjsmMDCMt1utuYfXHgg=\"}"
+        },
+        {
+          "name": "WAPrimaryFeatures",
+          "value": "[\"ddm_settings\",\"favorite_sticker\",\"link_preview\",\"poll_creation_group\",\"poll_creation_on_one_one\",\"poll_creation_cag\",\"newsletter\",\"external_web_beta_opt_in\",\"link_preview_hq_thumbnail\",\"history_sync_on_demand\",\"post_status_in_companion\",\"primary_favorites_sync_support\",\"primary_campaign_id_in_history_sync_support\",\"reactions_send\",\"vo_sp_receiver\",\"disable_link_previews\"]"
+        },
+        {
+          "name": "qSxyiRwVbzl7PrnYW/hBTw==",
+          "value": "{\"isDismissed\":false,\"firstSeenTime\":1735686987}"
+        },
+        {
+          "name": "WAMms4Conn",
+          "value": "{\"queryStartTime\":\"2024-12-31T23:16:27.178Z\",\"auth\":\"Ac0ZM_9KT8Vdkp7oRyNo4618FpR2GQTEPJRvICFs1WwUjg\",\"hosts\":[{\"hostname\":\"media.fpsa1-1.fna.whatsapp.net\",\"class\":\"fna\",\"ips\":[{\"ip4\":\"151.99.220.160\"}],\"fallback\":{\"hostname\":\"media-mxp1-1.cdn.whatsapp.net\",\"class\":\"pop\",\"ips\":[{\"ip4\":\"31.13.86.51\",\"ip6\":\"2a03:2880:f208:c5:face:b00c:0:167\"}]},\"type\":\"primary\",\"rules\":[{\"download\":[\"video\",\"image\",\"gif\",\"sticker\",\"thumbnail-image\",\"thumbnail-video\"]},{\"downloadBuckets\":[\"102\",\"103\",\"106\",\"107\"]}]},{\"hostname\":\"media.fpsa1-1.fna.whatsapp.net\",\"class\":\"fna\",\"ips\":[{\"ip4\":\"151.99.220.160\"}],\"fallback\":{\"hostname\":\"media-mxp2-1.cdn.whatsapp.net\",\"class\":\"pop\",\"ips\":[{\"ip4\":\"157.240.203.60\",\"ip6\":\"2a03:2880:f26d:c2:face:b00c:0:167\"}]},\"type\":\"primary\",\"rules\":[{\"download\":[\"video\",\"image\",\"gif\",\"sticker\",\"thumbnail-image\",\"thumbnail-video\"]},{\"downloadBuckets\":[\"100\",\"105\"]}]},{\"hostname\":\"media.fpsa1-2.fna.whatsapp.net\",\"class\":\"fna\",\"ips\":[{\"ip4\":\"151.99.220.224\"}],\"fallback\":{\"hostname\":\"media-mxp1-1.cdn.whatsapp.net\",\"class\":\"pop\",\"ips\":[{\"ip4\":\"31.13.86.51\",\"ip6\":\"2a03:2880:f208:c5:face:b00c:0:167\"}]},\"type\":\"primary\",\"rules\":[{\"download\":[\"video\",\"image\",\"gif\",\"sticker\",\"thumbnail-image\",\"thumbnail-video\"]},{\"downloadBuckets\":[\"108\"]}]},{\"hostname\":\"media.fpsa1-2.fna.whatsapp.net\",\"class\":\"fna\",\"ips\":[{\"ip4\":\"151.99.220.224\"}],\"fallback\":{\"hostname\":\"media-mxp2-1.cdn.whatsapp.net\",\"class\":\"pop\",\"ips\":[{\"ip4\":\"157.240.203.60\",\"ip6\":\"2a03:2880:f26d:c2:face:b00c:0:167\"}]},\"type\":\"primary\",\"rules\":[{\"download\":[\"video\",\"image\",\"gif\",\"sticker\",\"thumbnail-image\",\"thumbnail-video\"]},{\"downloadBuckets\":[\"101\",\"104\",\"109\",\"110\",\"111\"]}]},{\"hostname\":\"media.fpsa1-2.fna.whatsapp.net\",\"class\":\"fna\",\"ips\":[{\"ip4\":\"151.99.220.224\"}],\"fallback\":{\"hostname\":\"media.fpsa1-1.fna.whatsapp.net\",\"class\":\"fna\",\"ips\":[{\"ip4\":\"151.99.220.160\"}]},\"type\":\"primary\",\"rules\":[{\"download\":[\"video\",\"image\",\"gif\",\"sticker\",\"newsletter-image\",\"newsletter-video\",\"newsletter-thumbnail-link\",\"newsletter-sticker\",\"newsletter-document\",\"newsletter-gif\",\"newsletter-ptt\",\"newsletter-audio\",\"thumbnail-image\",\"thumbnail-video\"]},{\"downloadBuckets\":[\"0\"]}]},{\"hostname\":\"media-mxp2-1.cdn.whatsapp.net\",\"class\":\"pop\",\"ips\":[{\"ip4\":\"157.240.203.60\",\"ip6\":\"2a03:2880:f26d:c2:face:b00c:0:167\"}],\"fallback\":{\"hostname\":\"media-fco2-1.cdn.whatsapp.net\",\"class\":\"pop\",\"ips\":[{\"ip4\":\"157.240.231.60\",\"ip6\":\"2a03:2880:f269:c1:face:b00c:0:167\"}]},\"type\":\"primary\",\"rules\":[{\"download\":[\"ppic\",\"md-app-state\",\"thumbnail-document\",\"biz-cover-photo\",\"ptt\",\"audio\",\"document\",\"thumbnail-link\",\"md-msg-hist\"]},{\"upload\":[\"image\",\"sticker\",\"ptt\",\"audio\",\"document\",\"video\",\"gif\",\"ppic\",\"md-app-state\",\"md-msg-hist\",\"template\",\"thumbnail-image\",\"thumbnail-video\",\"thumbnail-document\",\"thumbnail-link\",\"payment-bg-image\",\"product\",\"product-catalog-image\",\"biz-cover-photo\",\"preview\",\"newsletter-audio\",\"newsletter-document\",\"newsletter-image\",\"newsletter-gif\",\"newsletter-ptt\",\"newsletter-sticker\",\"newsletter-thumbnail-link\",\"newsletter-video\",\"sticker-pack\",\"thumbnail-sticker-pack\",\"music-artwork\"]},{\"downloadBuckets\":[\"0\"]}]},{\"hostname\":\"mmg.whatsapp.net\",\"class\":\"pop\",\"ips\":[{}],\"type\":\"fallback\",\"rules\":[{\"download\":[\"image\",\"sticker\",\"ptt\",\"audio\",\"document\",\"video\",\"gif\",\"ppic\",\"md-app-state\",\"md-msg-hist\",\"template\",\"thumbnail-image\",\"thumbnail-video\",\"thumbnail-document\",\"thumbnail-link\",\"payment-bg-image\",\"product\",\"product-catalog-image\",\"biz-cover-photo\",\"preview\",\"newsletter-audio\",\"newsletter-document\",\"newsletter-image\",\"newsletter-gif\",\"newsletter-ptt\",\"newsletter-sticker\",\"newsletter-thumbnail-link\",\"newsletter-video\",\"sticker-pack\",\"thumbnail-sticker-pack\",\"music-artwork\"]},{\"upload\":[\"image\",\"sticker\",\"ptt\",\"audio\",\"document\",\"video\",\"gif\",\"ppic\",\"md-app-state\",\"md-msg-hist\",\"template\",\"thumbnail-image\",\"thumbnail-video\",\"thumbnail-document\",\"thumbnail-link\",\"payment-bg-image\",\"product\",\"product-catalog-image\",\"biz-cover-photo\",\"preview\",\"newsletter-audio\",\"newsletter-document\",\"newsletter-image\",\"newsletter-gif\",\"newsletter-ptt\",\"newsletter-sticker\",\"newsletter-thumbnail-link\",\"newsletter-video\",\"sticker-pack\",\"thumbnail-sticker-pack\",\"music-artwork\"]}]}],\"ttl\":300000,\"maxBuckets\":12,\"authTTL\":21600000}"
+        },
+        {
+          "name": "system-theme-mode",
+          "value": "true"
+        },
+        {
+          "name": "WAWebEncKeySalt",
+          "value": "\"kbokYNmgA0bv5cose5yZ1MBJ6CHuvREYw5g/Ts3ixekIaBBdv0BiL0ygQrLgS8DB7ox7a5m1V07sx7bYoz4kqBB770jx5GaXOz5V5L7YQHt5FEyVYwpkMAske8ZPo8Y+Vp5qc4INMl2ATDBd0G82DxI7RIpWXjJPjSmJQvp3Dv4=\""
+        },
+        {
+          "name": "WAHistorySyncStatus",
+          "value": "{\"initialCompleted\":true,\"recentCompleted\":true}"
+        },
+        {
+          "name": "WAWebTimeSpentSession",
+          "value": "{\"id\":17681726,\"startTimestampMs\":1735686987258,\"lastActivityTimestampMs\":1735686992235,\"cumulativeBitsSet\":0,\"sequenceId\":-1,\"relativeTimestampMs\":4977,\"tsTimestampMs\":1735686993236,\"unifiedSessionId\":\"170188320\"}"
+        },
+        {
+          "name": "Session",
+          "value": "j7lcm3:1735687014211"
+        },
+        {
+          "name": "DH/GXpA17SIp9m+Ot50vfw==",
+          "value": "false"
+        },
+        {
+          "name": "AbpropsWebRefreshId",
+          "value": "4"
+        },
+        {
+          "name": "dI5Wj/y+AcWbiEoY6VKHNg==",
+          "value": "{\"views\":0}"
+        },
+        {
+          "name": "yEYeIyCFv5bmBIGBN8a76w==",
+          "value": "false"
+        },
+        {
+          "name": "critical_data_synced",
+          "value": "true"
+        },
+        {
+          "name": "1nmBGjaIqFxaSfPnTgnIoQ==",
+          "value": "false"
+        },
+        {
+          "name": "WANewslettersWasBootstrapped",
+          "value": "true"
+        },
+        {
+          "name": "o8PivxUWR5HKAKHAcikiTQ==",
+          "value": "[{\"id\":\"1735686985676\",\"startTime\":1735686985676,\"pttCancelBroadcast\":0,\"pttCancelGroup\":0,\"pttCancelIndividual\":0,\"pttCancelNewsletter\":0,\"pttDraftReviewBroadcast\":0,\"pttDraftReviewGroup\":0,\"pttDraftReviewIndividual\":0,\"pttDraftReviewNewsletter\":0,\"pttFastplaybackBroadcast\":0,\"pttFastplaybackGroup\":0,\"pttFastplaybackIndividual\":0,\"pttFastplaybackNewsletter\":0,\"pttLockBroadcast\":0,\"pttLockGroup\":0,\"pttLockIndividual\":0,\"pttLockNewsletter\":0,\"pttPlaybackBroadcast\":0,\"pttPlaybackGroup\":0,\"pttPlaybackIndividual\":0,\"pttPlaybackNewsletter\":0,\"pttRecordBroadcast\":0,\"pttRecordGroup\":0,\"pttRecordIndividual\":0,\"pttRecordNewsletter\":0,\"pttSendBroadcast\":0,\"pttSendGroup\":0,\"pttSendIndividual\":0,\"pttSendNewsletter\":0,\"pttPausedRecordBroadcast\":0,\"pttPausedRecordGroup\":0,\"pttPausedRecordIndividual\":0,\"pttPausedRecordNewsletter\":0,\"pttStopTapBroadcast\":0,\"pttStopTapGroup\":0,\"pttStopTapIndividual\":0,\"pttStopTapNewsletter\":0,\"pttOutOfChatBroadcast\":0,\"pttOutOfChatGroup\":0,\"pttOutOfChatIndividual\":0,\"pttOutOfChatNewsletter\":0,\"goldenBoxContactNarrativeAppearCount\":0,\"goldenBoxContactDialogAppearCount\":0,\"goldenBoxContactDialogSelectCount\":0,\"goldenBoxGroupNarrativeAppearCount\":0,\"goldenBoxGroupDialogAppearCount\":0,\"goldenBoxGroupDialogSelectCount\":0,\"infoScreenContactNarrativeAppearCount\":0,\"infoScreenContactDialogAppearCount\":0,\"infoScreenContactDialogSelectCount\":0,\"infoScreenGroupNarrativeAppearCount\":0,\"infoScreenGroupDialogAppearCount\":0,\"infoScreenGroupDialogSelectCount\":0,\"chatsListNarrativeAppearCount\":1,\"chatsListDialogAppearCount\":0,\"chatsListDialogSelectCount\":0,\"statusListNarrativeAppearCount\":0,\"statusListDialogAppearCount\":0,\"statusListDialogSelectCount\":0,\"callingScreenAudioNarrativeAppearCount\":0,\"callingScreenAudioDialogAppearCount\":0,\"callingScreenAudioDialogSelectCount\":0,\"prinaLastEvent\":1735686988321,\"communityTabGroupNavigations\":0,\"communityTabToHomeViews\":0,\"communityTabViews\":0,\"communityTabViewsViaContextMenu\":0,\"communityNoActionTabViews\":0,\"communityHome\":{},\"pnhCagActions\":{},\"pnhCtwaActions\":{},\"animatedEmojiSend\":0,\"singleEmojiSend\":0,\"emojiReply\":0,\"kicGroupNotificationTaps\":0,\"kicGroupNotifications\":0,\"kicNotificationTaps\":0,\"kicNotifications\":0,\"chatLockFolderChatsCount\":0,\"chatLockFolderOpenCount\":0,\"chatLockLockFolderHidden\":false,\"chatLockNewAddChatCount\":0,\"chatLockNewRemoveChatCount\":0,\"chatLockSecretCodeActive\":false}]"
+        },
+        {
+          "name": "dSQ9WJNzf51ALSfiNam9xQ==",
+          "value": "\"NOT_ACCEPTED\""
+        },
+        {
+          "name": "WASyncdPrimaryAllowsAllMutations",
+          "value": "true"
+        },
+        {
+          "name": "8D2LYG8hTtB1iwnwvvNDeA==",
+          "value": "\"{\\\"120363367329563787@g.us\\\":\\\"1:ylEPHIaU\\\"}\""
+        },
+        {
+          "name": "WADailyStatsStartTime",
+          "value": "1735686985676"
+        },
+        {
+          "name": "Trq+W9pa/d3wdKqVS+gxkg==",
+          "value": "true"
+        },
+        {
+          "name": "abprops_needed_early",
+          "value": "{\"web_apply_latest_db_schema_optimization_enabled\":true,\"web_colors_refresh\":false}"
+        },
+        {
+          "name": "WANoiseInfoIv",
+          "value": "[\"Wk/ouiaet3ytxEHl8LSuQg==\",\"3v66ZdPGcrOWSqkmTpqlZQ==\",\"cyota6iGkIfJhkT2uiMhfg==\",\"4XnuYNy2AQT84CjJIJspPQ==\"]"
+        },
+        {
+          "name": "me-display-name",
+          "value": "\"+372∙∙∙∙∙∙48\""
+        },
+        {
+          "name": "SIquM6j4l8dMGegt+QQ2CQ==",
+          "value": "[{\"id\":\"global_mute\",\"expiration\":0,\"callExpiration\":0,\"isAutoMuted\":false}]"
+        },
+        {
+          "name": "PnVucz5yLfEQX6qztj6JkQ==",
+          "value": "\"Iurii Teslia PdM\""
+        },
+        {
+          "name": "last-wid-md",
+          "value": "\"37253649648:7@c.us\""
+        },
+        {
+          "name": "2DN+RqvPJIpjknjRWZdj+w==",
+          "value": "true"
+        },
+        {
+          "name": "ChatThreadLoggingOffset",
+          "value": "55926"
+        },
+        {
+          "name": "mutex-ping-timeout",
+          "value": "1"
+        },
+        {
+          "name": "BusinessProfileLidTableMigrationComplete",
+          "value": "true"
+        },
+        {
+          "name": "MutexBlockStrategy",
+          "value": "0"
+        },
+        {
+          "name": "fBMsw2c1/YhXbWrpSYMImA==",
+          "value": "false"
+        },
+        {
+          "name": "WALangPhonePref",
+          "value": "\"en_US\""
+        },
+        {
+          "name": "WARoutingInfo",
+          "value": "{\"domain\":\"fb\",\"edgeRouting\":\"CAsIBQ==\"}"
+        },
+        {
+          "name": "MdRecentMailboxAgeDays",
+          "value": "0"
+        },
+        {
+          "name": "pfOWmZjBfacafnvCUL/GIA==",
+          "value": "{\"readReceipts\":\"all\",\"profilePicture\":\"all\",\"about\":\"contacts\",\"online\":\"all\",\"lastSeen\":\"contacts\",\"groupAdd\":\"all\",\"callAdd\":\"all\",\"messages\":\"all\"}"
+        },
+        {
+          "name": "WAShouldCheckContactSyncStatus",
+          "value": "true"
+        },
+        {
+          "name": "WAArchiveV2EnabledSetting",
+          "value": "true"
+        },
+        {
+          "name": "ZY9SoH609+vzZD0XSwqAIg==",
+          "value": "0"
+        },
+        {
+          "name": "WACachedProfilePicEURL",
+          "value": "\"https://pps.whatsapp.net/v/t61.24694-24/471414415_8955716871208491_5563157824164645256_n.jpg?ccb=11-4&oh=01_Q5AaILbO-8XuEoFfZ8aDMiOrYRQ80p2PlbfLaLbWTdeW5OfP&oe=67818E8B&_nc_sid=5e03e0&_nc_cat=104\""
+        },
+        {
+          "name": "SHU39nRnUYdYd06g55QPSw==",
+          "value": "false"
+        },
+        {
+          "name": "ChatThreadLoggingLastUploadedStartTs",
+          "value": "0"
+        },
+        {
+          "name": "WALid",
+          "value": "\"103569478914127:7@lid\""
+        },
+        {
+          "name": "abprops",
+          "value": "{\"abKey\":\"KWp,7WP,QF,36A,1mk,AG,w,6,2,6D,4T,2H\",\"refresh\":\"92438\",\"lastSyncTime\":1735686987182}"
+        },
+        {
+          "name": "MdSyncActionsActionSanitized",
+          "value": "true"
+        },
+        {
+          "name": "Pty0/HwrWPTHlkZDhbwbVw==",
+          "value": "false"
+        },
+        {
+          "name": "WAWebWAMBeaconingSettings",
+          "value": "\"[{\\\"key\\\":\\\"regular\\\",\\\"ts\\\":1735686985,\\\"value\\\":null}]\""
+        },
+        {
+          "name": "MdPairingTimestamp",
+          "value": "1735686985"
+        },
+        {
+          "name": "WebEncKeySalt",
+          "value": "\"kbokYNmgA0bv5cose5yZ1MBJ6CHuvREYw5g/Ts3ixekIaBBdv0BiL0ygQrLgS8DB7ox7a5m1V07sx7bYoz4kqBB770jx5GaXOz5V5L7YQHt5FEyVYwpkMAske8ZPo8Y+Vp5qc4INMl2ATDBd0G82DxI7RIpWXjJPjSmJQvp3Dv4=\""
+        },
+        {
+          "name": "abprops-refresh-id",
+          "value": "10"
+        },
+        {
+          "name": "jDdegIiokEMLhynTDbQ9Gw==",
+          "value": "\"NOT_ACCEPTED\""
+        },
+        {
+          "name": "WaInitialHistorySynced",
+          "value": "\"true\""
+        },
+        {
+          "name": "whatsapp-mutex",
+          "value": "\"x138864082:init_1735686979777\""
+        }
+      ]
+    }
+  ]
+}
