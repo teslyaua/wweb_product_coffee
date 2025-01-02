@@ -2,15 +2,15 @@
   "name": "wweb_product_coffee",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
   "scripts": {
-    "start": "node ."
+    "start": "node ./src/main.js",
+    "schedule": "node scheduler.js"
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
   "dependencies": {
-    "qrcode-terminal": "^0.12.0",
-    "whatsapp-web.js": "^1.26.0"
+    "@wppconnect-team/wppconnect": "^1.35.2",
+    "node-schedule": "^2.1.1"
   }
 }
