@@ -48,7 +48,7 @@ async function getYesVotesAndPair(client, chatID, msgId) {
     pairs.push([user1, user2]);
   }
 
-  let finalMessage = "Hey dear Product People, here are some random coffee pairs ☕️😉:";
+  let finalMessage = "Hey dear Product People, here are some random coffee pairs ☕️😉:\n";
   const mentionedUsers = [];
   pairs.forEach(([user1, user2]) => {
     finalMessage += `Hey, @${user1} your pair is @${user2}\n`;
@@ -56,7 +56,7 @@ async function getYesVotesAndPair(client, chatID, msgId) {
   });
 
   if (yesVotes.length === 1) {
-    finalMessage += `Hey, @${yesVotes[0]} unfortunately, there is no pair for you this time\n.`;
+    finalMessage += `Hey, @${yesVotes[0]} unfortunately, there is no pair for you this time.`;
     mentionedUsers.push(yesVotes[0]);
   }
 
