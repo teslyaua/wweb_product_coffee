@@ -4,7 +4,7 @@ let  msgId = ""
 const  chatID = "120363367329563787@g.us"
 
 wppconnect
-  .create()
+  .create({session: 'prd_coffee'})
   .then((client) => start(client))
   .catch((error) => console.log(error));
 

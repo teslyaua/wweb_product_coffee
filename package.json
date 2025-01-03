@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "node ./src/main.js",
-    "schedule": "node scheduler.js"
+    "start_old": "node ./main_old.js",
+    "schedule": "node ./src/scheduler.js"
   },
   "author": "",
   "license": "ISC",

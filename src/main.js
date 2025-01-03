@@ -1,8 +1,12 @@
 const wppconnect = require("@wppconnect-team/wppconnect");
 const { handleMessage } = require("./commands");
 
-async function start(client) {
-  console.log('Current directory:', __dirname);
+wppconnect
+  .create({session: 'prd_coffee'})
+  .then((client) => start(client))
+  .catch((error) => console.log(error));
+
+function start(client) {
   try {
     console.log("Bot started...");
     client.onMessage((msg) => handleMessage(client, msg));
@@ -10,8 +14,3 @@ async function start(client) {
     console.error("Error starting the bot:", error);
   }
 }
-
-wppconnect
-  .create()
-  .then((client) => start(client))
-  .catch((error) => console.log(error));
