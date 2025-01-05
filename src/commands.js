@@ -3,6 +3,7 @@ const { sendPoll, getPollResults, getYesVotesAndPair } = require("./votes");
 // Data for Product Coffee
 const chatID = "120363367329563787@g.us";
 const question = "New Product Coffee 🎉? Deadline today EOD.";
+const helloResponse = `Hi there! ☕️ I’m here to help you brew some perfect coffee connections! No worries, I’m not taking anyone’s job… yet. 😏`;
 const answers = ["Yes", "Not this time"];
 let msgId = "";
 
@@ -18,9 +19,17 @@ async function handleMessage(client, msg) {
         await client.reply(msg.from, "pong", msg.id.toString());
         break;
 
-      case "!chats":
-        const chats = await client.getAllChats();
+      case "hello pdm assistant!":
+        await client.reply(msg.from, helloResponse, msg.id.toString());
+        break;
+
+      case "!chat details":
+        const chats = await client.listChats();
         await client.sendText(msg.from, `The assistant has ${chats.length} chats open.`);
+        // Extract the IDs
+        const chatIds = chats.map(chat => chat.id._serialized); // Assuming `_serialized` is the ID format used
+
+        console.log("Chat IDs:", chatIds);
         break;
 
       case "!sendpoll":

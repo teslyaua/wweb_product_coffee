@@ -4,7 +4,7 @@ const { handleMessage } = require("./commands");
 const { sendPoll, getYesVotesAndPair } = require("./votes");
 
 // Data for Product Coffee
-const chatID = "120363367329563787@g.us";
+const chatID = "120363047279824019@g.us";
 const coffeeReminderMessage = `
 What is a Product Coffee reminder 💡
 
@@ -18,7 +18,7 @@ How Does it Work?
 
 This is an excellent opportunity to connect, learn, and share experiences with your peers ⭐️💪
 `;
-const question = "New Product Coffee 🎉? Deadline today EOD.";
+const question = "New Product Coffee timetime ☕️ 🎉? Deadline: today EOD.";
 const answers = ["Yes", "Not this time"];
 let msgId = "";
 
@@ -35,15 +35,15 @@ function start(client) {
     // Schedule tasks
     console.log("Scheduling tasks...");
     
-    // Send poll on Wednesday at 09:00 every 2 weeks
-    schedule.scheduleJob('poll-job', '0 21 * * 5', async () => {
+    // Send poll on Monday at 09:00 every 2 weeks
+    schedule.scheduleJob('poll-job', '00 09 * * 1', async () => {
       console.log("Sending poll...");
       msgId = await sendPoll(client, chatID, question, answers);
       await client.sendText(chatID, coffeeReminderMessage);
     });
 
-    // Send pairs on Thursday at 09:00 every 2 weeks`
-    schedule.scheduleJob('follow-up-job', '0 22 * * 5', async () => {
+    // Send pairs on Tuesday at 09:00 every 2 weeks`
+    schedule.scheduleJob('follow-up-job', '00 09 * * 2', async () => {
       console.log("Generating pairs...");
       await getYesVotesAndPair(client, chatID, msgId);
     });
