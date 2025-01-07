@@ -20,7 +20,7 @@ This is an excellent opportunity to connect, learn, and share experiences with y
 `;
 const question = "New Product Coffee timetime ☕️ 🎉? Deadline: today EOD.";
 const answers = ["Yes", "Not this time"];
-let msgId = "";
+let msg = "";
 
 wppconnect
   .create({ session: 'prd_coffee' })
@@ -38,14 +38,14 @@ function start(client) {
     // Send poll on Monday at 09:00 every 2 weeks
     schedule.scheduleJob('poll-job', '00 09 * * 1', async () => {
       console.log("Sending poll...");
-      msgId = await sendPoll(client, chatID, question, answers);
+      msg = await sendPoll(client, chatID, question, answers);
       await client.sendText(chatID, coffeeReminderMessage);
     });
 
     // Send pairs on Tuesday at 09:00 every 2 weeks`
     schedule.scheduleJob('follow-up-job', '00 09 * * 2', async () => {
       console.log("Generating pairs...");
-      await getYesVotesAndPair(client, chatID, msgId);
+      await getYesVotesAndPair(client, chatID, msg);
     });
 
   } catch (error) {

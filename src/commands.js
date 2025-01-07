@@ -23,7 +23,7 @@ async function handleMessage(client, msg) {
         await client.reply(msg.from, helloResponse, msg.id.toString());
         break;
 
-      case "!chat details":
+      case "!chats details":
         const chats = await client.listChats();
         await client.sendText(msg.from, `The assistant has ${chats.length} chats open.`);
         // Extract the IDs
@@ -42,6 +42,16 @@ async function handleMessage(client, msg) {
 
       case "!getyesvotes":
         await getYesVotesAndPair(client, chatID, msgId);
+        break;
+
+      case "!get messages":
+        const messages = await client.getMessages(chatID, { count: 10 });
+        
+        // Log the IDs of the messages
+        messages.forEach((message, index) => {
+          console.log(`Message ${index + 1}: ID = ${message.id}`);
+          console.log(`Message  ${index + 1}: body = ${message.body}`);
+        });
         break;
 
       default:
