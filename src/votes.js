@@ -29,8 +29,8 @@ async function getPollResults(client, chatID, msgId) {
   await client.sendText(chatID, `Poll Results:\n\n${messageContent}`);
 }
 
-async function getYesVotesAndPair(client, chatID, msgId) {
-  const votesData = await client.getVotes(msgId.id);
+async function getYesVotesAndPair(client, chatID, msg) {
+  const votesData = await client.getVotes(msg.id);
   const yesVotes = votesData.votes
     .filter(
       (vote) =>

@@ -2,8 +2,11 @@ const wppconnect = require("@wppconnect-team/wppconnect");
 const schedule = require("node-schedule");
 const { handleMessage } = require("./commands");
 const { sendPoll, getYesVotesAndPair } = require("./votes");
+const { saveMessageToFile, getLatestMessage } = require("./utils/files-utils"); 
+
 
 // Data for Product Coffee
+const checkPhone = "+37253649648@c.us"; // WhatsApp ID format
 const chatID = "120363047279824019@g.us";
 const coffeeReminderMessage = `
 What is a Product Coffee reminder 💡
@@ -36,17 +39,40 @@ function start(client) {
     console.log("Scheduling tasks...");
     
     // Send poll on Monday at 09:00 every 2 weeks
-    schedule.scheduleJob('poll-job', '00 09 * * 1', async () => {
+    schedule.scheduleJob('poll-job', '00 19 * * 3', async () => {
       console.log("Sending poll...");
       msg = await sendPoll(client, chatID, question, answers);
+      console.log(`msgId = ${msg.id} `);
+      // Save the message to the file
+      saveMessageToFile(msg);
       await client.sendText(chatID, coffeeReminderMessage);
     });
 
     // Send pairs on Tuesday at 09:00 every 2 weeks`
-    schedule.scheduleJob('follow-up-job', '00 09 * * 2', async () => {
+    schedule.scheduleJob('follow-up-job', '00 15 * * 4', async () => {
       console.log("Generating pairs...");
-      await getYesVotesAndPair(client, chatID, msg);
+      // Get the latest message from the file
+      const latestMessage = getLatestMessage();
+      if (latestMessage) {
+        console.log("Latest stored message:", latestMessage);
+      } else {
+        console.log("No messages found or error occurred.");
+      }
+
+      await getYesVotesAndPair(client, chatID, latestMessage);
     });
+
+
+    // --- CHECK message every 8 hours
+    schedule.scheduleJob('check-job', '0 */8 * * *', async () => {
+      try {
+        console.log("Sending check message...");
+        await client.sendText(checkPhone, "check");
+      } catch (err) {
+        console.error("Failed to send check message:", err);
+      }
+    });
+
 
   } catch (error) {
     console.error("Error starting the bot with scheduler:", error);
