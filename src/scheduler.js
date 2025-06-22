@@ -39,7 +39,7 @@ function start(client) {
     console.log("Scheduling tasks...");
     
     // Send poll on Monday at 09:00 every 2 weeks
-    schedule.scheduleJob('poll-job', '00 19 * * 3', async () => {
+    schedule.scheduleJob('poll-job', '06 12 * * 3', async () => {
       console.log("Sending poll...");
       msg = await sendPoll(client, chatID, question, answers);
       console.log(`msgId = ${msg.id} `);
@@ -49,7 +49,7 @@ function start(client) {
     });
 
     // Send pairs on Tuesday at 09:00 every 2 weeks`
-    schedule.scheduleJob('follow-up-job', '00 15 * * 4', async () => {
+    schedule.scheduleJob('follow-up-job', '05 15 * * 7', async () => {
       console.log("Generating pairs...");
       // Get the latest message from the file
       const latestMessage = getLatestMessage();
@@ -61,18 +61,6 @@ function start(client) {
 
       await getYesVotesAndPair(client, chatID, latestMessage);
     });
-
-
-    // --- CHECK message every 8 hours
-    schedule.scheduleJob('check-job', '0 */8 * * *', async () => {
-      try {
-        console.log("Sending check message...");
-        await client.sendText(checkPhone, "check");
-      } catch (err) {
-        console.error("Failed to send check message:", err);
-      }
-    });
-
 
   } catch (error) {
     console.error("Error starting the bot with scheduler:", error);

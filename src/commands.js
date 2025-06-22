@@ -1,4 +1,6 @@
 const { sendPoll, getPollResults, getYesVotesAndPair } = require("./votes");
+const { saveMessageToFile, getLatestMessage } = require("./utils/files-utils"); 
+
 
 // Data for Product Coffee
 const chatID = "120363367329563787@g.us";
@@ -6,6 +8,7 @@ const question = "New Product Coffee 🎉? Deadline today EOD.";
 const helloResponse = `Hi there! ☕️ I’m here to help you brew some perfect coffee connections! No worries, I’m not taking anyone’s job… yet. 😏`;
 const answers = ["Yes", "Not this time"];
 let msgId = "";
+let messages = [];
 
 // Command handler
 async function handleMessage(client, msg) {
@@ -45,13 +48,29 @@ async function handleMessage(client, msg) {
         break;
 
       case "!get messages":
-        const messages = await client.getMessages(chatID, { count: 10 });
+        messages = await client.getMessages(chatID, { count: 10 });
         
         // Log the IDs of the messages
         messages.forEach((message, index) => {
           console.log(`Message ${index + 1}: ID = ${message.id}`);
           console.log(`Message  ${index + 1}: body = ${message.body}`);
         });
+        break;
+
+      case "!get latest pairs":
+        const checkPhone = "+37253649648@c.us"; // WhatsApp ID format
+        // const chatID = "120363047279824019@g.us";
+
+        console.log("Generating pairs...");
+        // Get the latest message from the file
+        const latestMessage = getLatestMessage();
+        if (latestMessage) {
+          console.log("Latest stored message:", latestMessage);
+        } else {
+          console.log("No messages found or error occurred.");
+        }
+
+        await getYesVotesAndPair(client, chatID, latestMessage);
         break;
 
       default:
